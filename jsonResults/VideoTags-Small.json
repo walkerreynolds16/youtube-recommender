@@ -1,0 +1,188 @@
+{
+    "Sturgis Motorcycle Rally": {},
+    "Portland Protest": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/0f2f9"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Television_program"
+            ]
+        }
+    },
+    "Fourth of July": {},
+    "Florida Man 2": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "Rocket Launch": {},
+    "Minneapolis Protest": {},
+    "Coronavirus Lockdown Protest": {},
+    "Yung Terps": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/04rlf"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Music"
+            ]
+        }
+    },
+    "Border Security Expo": {},
+    "Conscious Life Expo": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "Gem & Jam": {
+        "tags": [
+            "allgasnobrakes",
+            "andrewcallaghan",
+            "comedy",
+            "interview",
+            "interviews",
+            "originalshow",
+            "journalism",
+            "gem and jam"
+        ],
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "AVN Expo": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "A Night in Las Vegas": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "Midwest FurFest": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "Flat Earth Conference": {
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "Donald Trump Jr. Book Club": {},
+    "Florida Man": {
+        "tags": [
+            "Florida",
+            "Florida Man",
+            "Interviews",
+            "Funny"
+        ],
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/02jjt",
+                "/m/02jjt"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Entertainment"
+            ]
+        }
+    },
+    "Talladega Superspeedway": {
+        "tags": [
+            "Interviews",
+            "Talladega",
+            "Superspeedway"
+        ],
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/06ntj",
+                "/m/04rlf"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Sport",
+                "https://en.wikipedia.org/wiki/Music"
+            ]
+        }
+    },
+    "AlienCon": {
+        "tags": [
+            "AlienCon 2019",
+            "aliencon",
+            "aliens",
+            "interviews"
+        ]
+    },
+    "The Raid of Area 51": {
+        "tags": [
+            "area51",
+            "area 51",
+            "interviews",
+            "funny",
+            "funny interviews",
+            "try not to laugh",
+            "lol",
+            "comedy"
+        ]
+    },
+    "Burning Man": {
+        "tags": [
+            "burning man",
+            "black rock city",
+            "all gas no brakes",
+            "comedy",
+            "interviews",
+            "funny"
+        ],
+        "topicDetails": {
+            "relevantTopicIds": [
+                "/m/04rlf"
+            ],
+            "topicCategories": [
+                "https://en.wikipedia.org/wiki/Music"
+            ]
+        }
+    }
+}

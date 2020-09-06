@@ -7,11 +7,12 @@ import json
 
 
 def setup(app, args):
-    app.run()
+    app.run(debug=True)
 
 def createFlaskApp():
     # Set up app object
     app = Flask(__name__)
+
 
     # Setup some configs for the flask app
     app.config['CORS_HEADERS'] = 'Content-Type'

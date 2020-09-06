@@ -1,4 +1,5 @@
 import json
+import Util.TopicUtil as TopicUtil
 
 
 def getSubscriptions(youtube):
@@ -32,15 +33,13 @@ def getSubscriptions(youtube):
 
     return channelIds
 
-def chunkChannelIds(channelIds, size):
-    for i in range(0, len(channelIds), size):
-        yield channelIds[i:i + size]
+
 
 def getSubscriptionTopics(youtube, channelIds):
 
     channelTopicMap = {}
 
-    for chunk in chunkChannelIds(channelIds, 50):
+    for chunk in TopicUtil.chunkList(channelIds, 50):
         idString = ""
         for id in chunk:
             idString += id + ","
@@ -58,3 +57,80 @@ def getSubscriptionTopics(youtube, channelIds):
 
     return channelTopicMap
     
+
+def getUploadPlaylistId(youtube, channelId):
+    request = youtube.channels().list(
+            part="contentDetails",
+            id=channelId
+        )
+
+    response = request.execute()
+
+    print(json.dumps(response))
+
+    if(len(response['items']) > 0):
+        return response['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+    else:
+        return None
+
+
+def getVideoIdsInPlaylist(youtube, playlistId):
+    videoIds = []
+
+    request = youtube.playlistItems().list(
+        part="contentDetails",
+        playlistId=playlistId,
+        maxResults=50
+    )
+
+    response = request.execute()
+
+    while(True):
+
+        for item in response['items']:
+            videoIds.append(item['contentDetails']['videoId'])
+
+        if('nextPageToken' not in response):
+            break
+
+        request = youtube.playlistItems().list(
+            part="contentDetails",
+            playlistId=playlistId,
+            maxResults=50,
+            pageToken=response['nextPageToken']
+        )
+        
+        response = request.execute()
+
+    return videoIds
+
+
+def getTagsForListOfVideoIds(youtube, videoIds):
+    videoTagData = {}
+
+    for chunk in TopicUtil.chunkList(videoIds, 50):
+        idString = ""
+
+        for videoId in chunk:
+            idString += videoId + ','
+
+        idString = idString[:-1]
+
+        request = youtube.videos().list(
+            part="snippet,topicDetails",
+            id=idString
+        )
+        response = request.execute()
+        
+        for video in response['items']:
+            tagData = {}
+            
+            if('tags' in video['snippet']):
+                tagData['tags'] = video['snippet']['tags']
+            if('topicDetails' in video):
+                tagData['topicDetails'] = video['topicDetails']
+
+            videoTagData[video['snippet']['title']] = tagData
+
+
+    return videoTagData
