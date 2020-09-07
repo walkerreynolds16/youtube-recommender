@@ -39,3 +39,11 @@ def updateYoutubeChannel():
 def deleteYoutubeChannel():
     pass
 
+
+@channelBP.route("/youtube/random", methods=['GET'])
+def getRandomYoutubeChannel():
+    noTags = request.args.get('noTags')
+
+    channel = ChannelService.getRandomYTChannelFromDB(noTags)
+
+    return JSONEncoder().encode(channel)

@@ -1,6 +1,7 @@
 import Util.GeneralUtil as GeneralUtil
 
 from pymongo import MongoClient
+import random
 
 DBConnectionString = "mongodb+srv://api:LZnl6oHCbXK8Sp74@youtube-recommender-clu.ggqwr.mongodb.net/?retryWrites=true&w=majority"
 
@@ -47,3 +48,17 @@ def updateYTChannelInDB(channelId, tags):
     collection.update_one({'channelId': channelId}, {'$set': {"tags": tags}})
 
     client.close()
+
+def getRandomYTChannelFromDB(noTags):
+    client = MongoClient(DBConnectionString)
+    db = client.YT_Recommender
+    collection = db['YT_Channel']
+
+    args = {}
+    if(noTags):
+        args['tags'] = []
+
+    channels = collection.find(args)
+    client.close()
+
+    return random.choice(list(channels))
