@@ -23,7 +23,19 @@ def getYoutubeChannel():
 
 @channelBP.route("/youtube", methods=['POST'])
 def createYoutubeChannel():
-    pass
+    requiredFields = ['url', 'title', 'tags', 'channelId', 'description', 'thumbnail', 'topics']
+    print(request.get_json())
+    for field in requiredFields:
+        if field not in request.get_json():
+            return "A required field was not provided"
+
+    # if(field not in request.get_json() for field in requiredFields):
+    #     return "A required field was not provided"
+    
+    channel = ChannelService.createYTChannelInDB(request.get_json())
+
+    return JSONEncoder().encode(channel)
+
 
 @channelBP.route("/youtube", methods=['PUT'])
 def updateYoutubeChannel():
@@ -37,7 +49,14 @@ def updateYoutubeChannel():
 
 @channelBP.route("/youtube", methods=['DELETE'])
 def deleteYoutubeChannel():
-    pass
+    channelId = request.json.get("channelId")
+    print(channelId)
+    if(not channelId):
+        return "ChannelId was not provided"
+
+    ChannelService.deleteYTChannelFromDB(channelId)
+
+    return '', 200
 
 
 @channelBP.route("/youtube/random", methods=['GET'])

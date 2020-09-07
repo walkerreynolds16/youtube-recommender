@@ -6,6 +6,17 @@ import random
 DBConnectionString = "mongodb+srv://api:LZnl6oHCbXK8Sp74@youtube-recommender-clu.ggqwr.mongodb.net/?retryWrites=true&w=majority"
 
 
+def createYTChannelInDB(channel):
+    client = MongoClient(DBConnectionString)
+    db = client.YT_Recommender
+    collection = db['YT_Channel']
+
+    collection.insert_one(channel)
+
+    client.close()
+
+    return channel
+
 def getChannelData(youtube, channelIds, part):
 
     channelMap = {}
@@ -40,6 +51,7 @@ def getYTChannelFromDB(channelId):
 
     return channel
 
+
 def updateYTChannelInDB(channelId, tags):
     client = MongoClient(DBConnectionString)
     db = client.YT_Recommender
@@ -48,6 +60,7 @@ def updateYTChannelInDB(channelId, tags):
     collection.update_one({'channelId': channelId}, {'$set': {"tags": tags}})
 
     client.close()
+
 
 def getRandomYTChannelFromDB(noTags):
     client = MongoClient(DBConnectionString)
@@ -62,3 +75,13 @@ def getRandomYTChannelFromDB(noTags):
     client.close()
 
     return random.choice(list(channels))
+
+
+def deleteYTChannelFromDB(channelId):
+    client = MongoClient(DBConnectionString)
+    db = client.YT_Recommender
+    collection = db['YT_Channel']
+
+    collection.delete_one({"channelId": channelId})
+
+    client.close()
