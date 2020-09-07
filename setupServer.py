@@ -3,6 +3,7 @@ eventlet.monkey_patch()
 
 import requests
 from flask import Flask
+from flask_cors import CORS, cross_origin
 import json
 
 
@@ -15,7 +16,8 @@ def createFlaskApp():
 
 
     # Setup some configs for the flask app
-    app.config['CORS_HEADERS'] = 'Content-Type'
+    cors = CORS(app)
+    app.config['CORS_HEADERS'] = 'Content-Type' 
     app.secret_key = "secretKey!@#$"
 
     # Setup blueprints
