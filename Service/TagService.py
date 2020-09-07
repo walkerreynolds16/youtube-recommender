@@ -11,10 +11,15 @@ def getYTTagFromDB(tagString):
     db = client.YT_Recommender
     collection = db['YT_Tag']
 
-    tag = collection.find_one({'tagString': tagString})
+    res = None
+    if(not tagString):
+        res = list(collection.find({}))
+    else:
+        res = collection.find_one({'tagString': tagString})
+
     client.close()
 
-    return tag
+    return res
 
 def createYTTagInDB(tagString):
     client = MongoClient(DBConnectionString)
@@ -22,3 +27,16 @@ def createYTTagInDB(tagString):
     collection = db['YT_Tag']
 
     collection.insert_one({"tagString": tagString, "useCount": 0, "parentTopics": []})
+
+    client.close()
+
+
+
+def deleteYTTagFromDB(tagString):
+    client = MongoClient(DBConnectionString)
+    db = client.YT_Recommender
+    collection = db['YT_Tag']
+
+    collection.delete_one({"tagString": tagString})
+
+    client.close()

@@ -14,8 +14,8 @@ youtube = YouTubeManager.get_authenticated_service()
 def getYoutubeTag():
     tagString = request.args.get('tagString')
 
-    if(not tagString):
-        return "No tag provided"
+    # if(not tagString):
+    #     return "No tag provided"
 
     tag = TagService.getYTTagFromDB(tagString)
 
@@ -35,5 +35,12 @@ def updateYoutubeTag():
 
 @tagBP.route("/youtube", methods=['DELETE'])
 def deleteYoutubeTag():
-    pass
+    tagString = request.json.get('tagString')
+
+    if(not tagString):
+        return "No tagString provided"
+
+    TagService.deleteYTTagFromDB(tagString)
+
+    return '', 204
 
