@@ -1,5 +1,6 @@
 import json
 import Util.TopicUtil as TopicUtil
+import Util.GeneralUtil as GeneralUtil
 
 
 def getSubscriptions(youtube):
@@ -34,12 +35,11 @@ def getSubscriptions(youtube):
     return channelIds
 
 
-
-def getSubscriptionTopics(youtube, channelIds):
+def getChannelTopics(youtube, channelIds):
 
     channelTopicMap = {}
 
-    for chunk in TopicUtil.chunkList(channelIds, 50):
+    for chunk in GeneralUtil.chunkList(channelIds, 50):
         idString = ""
         for id in chunk:
             idString += id + ","
@@ -57,6 +57,7 @@ def getSubscriptionTopics(youtube, channelIds):
 
     return channelTopicMap
     
+
 
 def getUploadPlaylistId(youtube, channelId):
     request = youtube.channels().list(
@@ -108,7 +109,7 @@ def getVideoIdsInPlaylist(youtube, playlistId):
 def getTagsForListOfVideoIds(youtube, videoIds):
     videoTagData = {}
 
-    for chunk in TopicUtil.chunkList(videoIds, 50):
+    for chunk in GeneralUtil.chunkList(videoIds, 50):
         idString = ""
 
         for videoId in chunk:

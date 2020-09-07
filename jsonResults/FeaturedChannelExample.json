@@ -1,0 +1,57 @@
+{
+  "kind": "youtube#channelListResponse",
+  "etag": "Ispvnqi6hMN-MoedTGoR-s0dTcg",
+  "pageInfo": { "resultsPerPage": 1 },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "Y012t7M7MNF0918lAuzOH6T3Mm8",
+      "id": "UCboMX_UNgaPBsUOIgasn3-Q",
+      "brandingSettings": {
+        "channel": {
+          "title": "Funhaus",
+          "description": "Funhaus is a bunch of people who play games. Does that mean we only play games? No - we've also got podcasts and fan Qs&As and game shows and...well, you get the picture.\n\nWe're Adam Kovic, James Willems, Elyse Willems, Lindsey Washburn, Jon Smith, Matt Peake, Omar de Armas, Dan Schneider, Don Casanova, Alanah Pearce, Jacob Fullerton, Adam Brouillard, John Holland, Ryan Hailey and Justin Yngelmo. We'll play everything from GTA to the crappiest games we can find. We'll also be doing live streams, fan events, and collaborations with any Rooster Teeth/YouTube friends and colleagues who wouldn't be embarrassed to be seen with us.\n\nWatch the new series NO IDEA Ikea this March 20 on YouTube.com/Funhaus\n\nSubscribe to Rooster Teeth FIRST to see all of our videos up to one week early as well as lots of content that isn't on our YouTube channel: http://bit.ly/rtfirst and type in code \"FUNHAUS\"",
+          "defaultTab": "Featured",
+          "trackingAnalyticsAccountId": "UA-2631020-24",
+          "showRelatedChannels": true,
+          "showBrowseView": true,
+          "featuredChannelsTitle": "Hausmates",
+          "featuredChannelsUrls": [
+            "UCzH3iADRIq1IJlIXjfNgTpA",
+            "UCkxctb0jr8vwa4Do6c6su0Q",
+            "UC4w_tMnHl6sw5VD93tVymGw"
+          ],
+          "unsubscribedTrailer": "_4C8aytI5-s",
+          "profileColor": "#000000"
+        },
+        "image": {
+          "bannerImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "bannerMobileImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w640-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj",
+          "bannerTabletLowImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "bannerTabletImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "bannerTabletHdImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "bannerTabletExtraHdImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+          "bannerMobileLowImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w320-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj",
+          "bannerMobileMediumHdImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w960-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj",
+          "bannerMobileHdImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1280-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj",
+          "bannerMobileExtraHdImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1440-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj",
+          "bannerTvImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "bannerTvLowImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w854-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "bannerTvMediumImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1280-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "bannerTvHighImageUrl": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w1920-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj"
+        },
+        "hints": [
+          { "property": "channel.modules.show_comments.bool", "value": "True" },
+          {
+            "property": "channel.banner.mobile.medium.image.url",
+            "value": "https://yt3.ggpht.com/RK0gQzTck11pXL1wK5QFH06ocPz6giSTB6Yy2WMfnET2YBZqOjSH1sy88FrtBylQSHEKl44yOw=w640-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj"
+          },
+          {
+            "property": "channel.featured_tab.template.string",
+            "value": "Everything"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -35,7 +35,13 @@ def createFlaskApp():
 
 
     from Resource.TopicResource import topicBP
+    from Resource.ChannelResource import channelBP
+    from Resource.TagResource import tagBP
+
 
     app.register_blueprint(topicBP, url_prefix="/topic")
+    app.register_blueprint(channelBP, url_prefix="/channel")
+    app.register_blueprint(tagBP, url_prefix="/tag")
+
     
     return app

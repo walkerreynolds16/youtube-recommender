@@ -11,6 +11,7 @@ from oauth2client.file import Storage # Added
 
 scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
 
+os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 def get_authenticated_service(): # Modified
     api_service_name = "youtube"
@@ -86,25 +87,38 @@ def getSubscriptionTopics(youtube, channelIds):
 
 
 def main():
-    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
     
     youtube = get_authenticated_service()
     
-    channelIds = getSubscriptions(youtube)
+    # channelIds = getSubscriptions(youtube)
 
-    channelTopicMap = getSubscriptionTopics(youtube, channelIds)
+    # channelTopicMap = getSubscriptionTopics(youtube, channelIds)
 
-    uniqueTopics = {}
-    for channel in channelTopicMap.keys():
-        topicList = channelTopicMap[channel]
+    # uniqueTopics = {}
+    # for channel in channelTopicMap.keys():
+    #     topicList = channelTopicMap[channel]
 
-        for topic in topicList:
-            if(topic in uniqueTopics):
-                uniqueTopics[topic].append(channel)
-            else:
-                uniqueTopics[topic] = [channel]
+    #     for topic in topicList:
+    #         if(topic in uniqueTopics):
+    #             uniqueTopics[topic].append(channel)
+    #         else:
+    #             uniqueTopics[topic] = [channel]
 
-    print(json.dumps(uniqueTopics))
+    # print(json.dumps(uniqueTopics))
+
+    # get featured channels
+    # request = youtube.channels().list(
+    #     part="brandingSettings",
+    #     id="UCboMX_UNgaPBsUOIgasn3-Q"
+    # )
+
+    request = youtube.channels().list(
+        part="snippet",
+        id="UCboMX_UNgaPBsUOIgasn3-Q"
+    )
+    response = request.execute()
+
+    print(json.dumps(response))
 
 
 if __name__ == "__main__":

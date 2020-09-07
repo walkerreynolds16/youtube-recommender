@@ -15,7 +15,7 @@ youtube = YouTubeManager.get_authenticated_service()
 def getTopicsForChannels():
     channelIds = TopicService.getSubscriptions(youtube)
 
-    channelTopicMap = TopicService.getSubscriptionTopics(youtube, channelIds)
+    channelTopicMap = TopicService.getChannelTopics(youtube, channelIds)
 
     return json.dumps(channelTopicMap)
 
@@ -24,7 +24,7 @@ def getTopicsForChannels():
 def getChannelsForTopics():
     channelIds = TopicService.getSubscriptions(youtube)
 
-    channelTopicMap = TopicService.getSubscriptionTopics(youtube, channelIds)
+    channelTopicMap = TopicService.getChannelTopics(youtube, channelIds)
 
     uniqueTopics = TopicUtil.flipChannelTopicMap(channelTopicMap)
     
