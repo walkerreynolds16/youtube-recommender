@@ -13,7 +13,8 @@ def getYTTagFromDB(tagString):
 
     res = None
     if(not tagString):
-        res = list(collection.find({}))
+        res = sorted(list(collection.find({})), key=lambda tag: tag['tagString'])
+
     else:
         res = collection.find_one({'tagString': tagString})
 

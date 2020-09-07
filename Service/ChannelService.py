@@ -17,6 +17,7 @@ def createYTChannelInDB(channel):
 
     return channel
 
+
 def getChannelData(youtube, channelIds, part):
 
     channelMap = {}
