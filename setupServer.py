@@ -14,7 +14,6 @@ def createFlaskApp():
     # Set up app object
     app = Flask(__name__)
 
-
     # Setup some configs for the flask app
     cors = CORS(app)
     app.config['CORS_HEADERS'] = 'Content-Type' 
@@ -24,11 +23,14 @@ def createFlaskApp():
     from Resource.TopicResource import topicBP
     from Resource.ChannelResource import channelBP
     from Resource.TagResource import tagBP
+    from Resource.CategoryResource import categoryBP
 
 
     app.register_blueprint(topicBP, url_prefix="/topic")
     app.register_blueprint(channelBP, url_prefix="/channel")
     app.register_blueprint(tagBP, url_prefix="/tag")
+    app.register_blueprint(categoryBP, url_prefix="/category")
+
 
     
     return app

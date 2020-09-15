@@ -24,8 +24,9 @@ def getYoutubeTag():
 @tagBP.route("/youtube", methods=['POST'])
 def createYoutubeTag():
     tagString = request.json.get('tagString')
+    category = request.json.get('category')
 
-    TagService.createYTTagInDB(tagString)
+    TagService.createYTTagInDB(tagString, category)
 
     return '', 204
 
